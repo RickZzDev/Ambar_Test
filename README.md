@@ -1,5 +1,5 @@
 # Git hub First 100 Repositories
-Este app consome a API do github e busca os 100 primeiros apps criados no site, como gerenciador de estado esta sendo usado o get, o design_pattern escolhido foi o Getx_pattern, e como bônus estou usando um package animado chamado AutomaticAnimatedChat criado por mim mesmo e hospedado no pub.dev.com
+Este app consome a API do github e busca os 100 primeiros apps criados no site e ao clicar em algum deles será redirecionado para o repositório pelo browser, como gerenciador de estado esta sendo usado o get, o design_pattern escolhido foi o Getx_pattern, e como bônus estou usando um package animado chamado AutomaticAnimatedChat criado por mim mesmo e hospedado no pub.dev.com
 Link do package: https://pub.dev/packages/automatic_animated_chat
 
 ## Getting Started
