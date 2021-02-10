@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 import 'package:ambar_test/app/data/models/git_repo_model.dart';
 import 'package:ambar_test/app/data/repository/home_repository.dart';
 import 'package:flutter/cupertino.dart';
@@ -30,13 +28,8 @@ class HomeController extends GetxController {
   Future<dynamic> getGitRepos() async {
     loading.value = true;
     try {
-      var response = await repository.getRepos();
-
-      List<dynamic> _list = json.decode(
-        utf8.decode(response.bodyBytes),
-      );
-
-      repos.addAll(GitRepoModel().fromJson(_list));
+      var _response = await repository.getRepos();
+      repos.addAll(_response);
     } catch (e) {
       loading.value = false;
       return Future.error(e);

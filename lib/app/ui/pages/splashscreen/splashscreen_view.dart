@@ -83,18 +83,6 @@ class _SplashScreenViewState extends State<SplashScreenView>
               ),
             ),
           ),
-          // Center(
-          //   child: AnimatedOpacity(
-          //     duration: Duration(milliseconds: 700),
-          //     opacity: animValue,
-          //     child: Container(
-          //       width: MediaQuery.of(context).size.width / 2,
-          //       child: Hero(
-          //           tag: "gitLottie",
-          //           child: Lottie.asset('assets/animations/splash_anim.json')),
-          //     ),
-          //   ),
-          // )
         ],
       ),
     );

@@ -1,3 +1,6 @@
+import 'dart:convert';
+
+import 'package:ambar_test/app/data/models/git_repo_model.dart';
 import 'package:ambar_test/app/data/provider/home_provider.dart';
 import 'package:meta/meta.dart';
 
@@ -6,9 +9,12 @@ class HomeRepository {
 
   HomeRepository({@required this.apiClient}) : assert(apiClient != null);
 
-  getRepos() {
-    //Descomente essa linha e comente a de baixo para ver o comportamento da teal ao receber uma Exception
-    // return throw Exception();
-    return apiClient.getRepos();
+  getRepos() async {
+    var response = await apiClient.getRepos();
+    if (response is Exception) return response;
+    List<dynamic> _list = json.decode(
+      utf8.decode(response.bodyBytes),
+    );
+    return GitRepoModel().fromJson(_list);
   }
 }

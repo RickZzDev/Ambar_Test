@@ -54,14 +54,4 @@ void main() {
       );
     },
   );
-
-  test(
-    "Should call HomeRepository that will call a HomeProvider",
-    () async {
-      await homeRepository.getRepos();
-      verify(
-        homeProvider.getRepos(),
-      );
-    },
-  );
 }
